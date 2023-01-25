@@ -1,6 +1,7 @@
 import { aLength } from './length';
 import { toPush } from './pushFunc';
 import { aMap } from './map';
+import { popFunc } from './pop';
 
 describe('Given array functions', () => {
   describe('When using aLength function get the length without the .length', () => {
@@ -44,6 +45,14 @@ describe('Given array functions', () => {
       const simbol = '*';
       const r = aMap(array, number, simbol);
       expect(r).toEqual([2, 4, 6, 8, 10]);
+    });
+  });
+
+  describe('When using pop without the array function', () => {
+    test('Then if your last value is hola ', () => {
+      const arr = [1, 2, 3, 4, 'hola'];
+      const r = popFunc(arr);
+      expect(r).toBe('hola');
     });
   });
 });
