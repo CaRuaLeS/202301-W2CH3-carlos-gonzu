@@ -1,5 +1,6 @@
 import { aLength } from './length';
 import { toPush } from './pushFunc';
+import { aMap } from './map';
 
 describe('Given array functions', () => {
   describe('When using aLength function get the length without the .length', () => {
@@ -34,6 +35,15 @@ describe('Given array functions', () => {
       const result = toPush(a, b);
       expect(result).toEqual(expected);
       expect(a).toEqual([1]);
+        });
+  });
+  describe('When using map without the array function', () => {
+    test('Then if you * for a number', () => {
+      const array = [1, 2, 3, 4, 5];
+      const number = 2;
+      const simbol = '*';
+      const r = aMap(array, number, simbol);
+      expect(r).toEqual([2, 4, 6, 8, 10]);
     });
   });
 });
