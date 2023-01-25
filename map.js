@@ -1,7 +1,5 @@
 import { aLength } from './length.js';
 
-const dArray = [1, 2, 3, 4, 5];
-
 export const aMap = (arr, number, simbol) => {
   const _length = aLength(arr);
 
@@ -26,5 +24,3 @@ export const aMap = (arr, number, simbol) => {
 
   return arr;
 };
-
-console.log(aMap(dArray, 7, '*'));
