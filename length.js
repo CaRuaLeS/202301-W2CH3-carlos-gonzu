@@ -1,5 +1,3 @@
-const array = [];
-
 export const aLength = (arr) => {
   let lengthValue = 0;
   for (const i of arr) {
@@ -8,5 +6,3 @@ export const aLength = (arr) => {
 
   return lengthValue;
 };
-
-console.log(aLength(array));
