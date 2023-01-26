@@ -1,8 +1,8 @@
 import { aLength } from './length.js';
 
 const array = [1, 2, 3, 4, 5, 6];
-export const unShift = (array, b) => {
-  let newWord = [aLength(array[0])];
+export const unShift = (arr, b) => {
+  let newWord = aLength(arr[0]);
   newWord = b;
   return newWord;
 };
