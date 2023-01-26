@@ -24,3 +24,10 @@ export const aMap = (arr, number, simbol) => {
 
   return arr;
 };
+
+const arr = ['foo', 'pepe', 'var'];
+const some = arr.reduce((x, y) => {
+  x + y;
+});
+
+console.log(some);
