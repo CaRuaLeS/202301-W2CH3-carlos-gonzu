@@ -2,6 +2,7 @@ import { aLength } from './length';
 import { toPush } from './pushFunc';
 import { aMap } from './map';
 import { popFunc } from './pop';
+import { findFunc } from './find';
 
 describe('Given array functions', () => {
   describe('When using aLength function get the length without the .length', () => {
@@ -80,6 +81,14 @@ describe('Given array functions', () => {
     test('Then if your last value is hola ', () => {
       const arr = [1, 2, 3, 4, 'hola'];
       const r = popFunc(arr);
+      expect(r).toBe('hola');
+    });
+  });
+
+  describe('When using find without the array function', () => {
+    test('Then if ', () => {
+      const arr = [1, 2, 3, 4, 'hola'];
+      const r = findFunc(arr, 'hola');
       expect(r).toBe('hola');
     });
   });
