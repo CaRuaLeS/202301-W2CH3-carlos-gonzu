@@ -2,6 +2,7 @@ import { aLength } from './length';
 import { toPush } from './pushFunc';
 import { aMap } from './map';
 import { popFunc } from './pop';
+import { Unshift } from './unshift';
 
 describe('Given array functions', () => {
   describe('When using aLength function get the length without the .length', () => {
@@ -36,7 +37,7 @@ describe('Given array functions', () => {
       const result = toPush(a, b);
       expect(result).toEqual(expected);
       expect(a).toEqual([1]);
-        });
+    });
   });
   describe('When using map without the array function', () => {
     test('Then if you * for a number', () => {
@@ -53,6 +54,20 @@ describe('Given array functions', () => {
       const arr = [1, 2, 3, 4, 'hola'];
       const r = popFunc(arr);
       expect(r).toBe('hola');
+    });
+  });
+  describe('When using unshift function', () => {
+    test('Unshift adds element to the beginning of the array', () => {
+      const arr = [1, 2, 3];
+      const result = Unshift(arr, 0);
+      expect(result).toEqual([0, 1, 2, 3]);
+    });
+  });
+  describe('When using unshift function', () => {
+    test('aUnshift returns a new array', () => {
+      const arr = [1, 2, 3];
+      const result = Unshift(arr, 0);
+      expect(result).not.toBe(arr);
     });
   });
 });

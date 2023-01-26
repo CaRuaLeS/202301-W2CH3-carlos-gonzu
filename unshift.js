@@ -1,10 +1,14 @@
 import { aLength } from './length.js';
 
 const array = [1, 2, 3, 4, 5, 6];
-export const unShift = (arr, b) => {
-  let newWord = aLength(arr[0]);
-  newWord = b;
-  return newWord;
+
+export const Unshift = (arr, element) => {
+  const newArr = [element];
+  for (let i = 0; i < aLength(arr); i++) {
+    newArr.push(arr[i]);
+  }
+
+  return newArr;
 };
 
-console.log(unShift(array, 1));
+console.log(Unshift(array, 0));

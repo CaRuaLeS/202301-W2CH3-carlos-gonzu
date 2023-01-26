@@ -1,3 +1,5 @@
+const arr = [1, 2, 3, 4, 5];
+
 export const aLength = (arr) => {
   let lengthValue = 0;
   for (let i of arr) {
@@ -6,3 +8,5 @@ export const aLength = (arr) => {
 
   return lengthValue;
 };
+
+console.log(aLength(arr));
