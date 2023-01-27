@@ -2,6 +2,7 @@ import { aLength } from './length';
 import { toPush } from './pushFunc';
 import { aMap } from './map';
 import { popFunc } from './pop';
+import { Unshift } from './unshift';
 import { findFunc } from './find';
 import { filterFunc } from './filter';
 
@@ -83,6 +84,20 @@ describe('Given array functions', () => {
       const arr = [1, 2, 3, 4, 'hola'];
       const r = popFunc(arr);
       expect(r).toBe('hola');
+    });
+  });
+  describe('When using unshift function', () => {
+    test('Unshift adds element to the beginning of the array', () => {
+      const arr = [1, 2, 3];
+      const result = Unshift(arr, 0);
+      expect(result).toEqual([0, 1, 2, 3]);
+    });
+  });
+  describe('When using unshift function', () => {
+    test('aUnshift returns a new array', () => {
+      const arr = [1, 2, 3];
+      const result = Unshift(arr, 0);
+      expect(result).not.toBe(arr);
     });
   });
 
